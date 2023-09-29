@@ -1,0 +1,104 @@
+##1
+# d = list(map(int, input().split()))
+# n = d[0]
+# d = d[1:]
+# s = 0
+# for i in range(1, n + 1):
+#     s = s + i
+# print(s - sum(d))
+
+##2
+# g, s = map(str, input().split())
+# g = int(g)
+# cur_len = 0
+# cur_str = ''
+# r = ''
+# for i in range(len(s)):
+#     if cur_len < (len(s) // g):
+#         cur_len +=1
+#         cur_str = cur_str + s[i]
+#     else:
+#         cur_len == g
+#         r += cur_str[::-1]
+#         cur_str = s[i]
+#         cur_len = 1
+# r += cur_str
+# print(r)
+# #3
+# self = 'AHIMOTUV18'
+# left = 'EJSZ'
+# right = '3L25'
+# def palindrome(s):
+#     if s == s[::-1]:
+#         return 1
+#     else:
+#         return 0
+# def mirror(s):
+#     if len(d) % 2 == 0:
+#         for i in range(len(d) // 2):
+#             a,b = d[i], d[-i-1]
+#             if not((a in self and b in self and b == a) or (a in left and b in right and left.index(a) == right.index(b)) or (a in right and b in left and right.index(a) == left.index(b))):
+#                 return 0
+#     else:
+#         if d[len(d)//2] not in self:
+#             return 0
+#         else:
+#             for i in range(len(d) // 2):
+#                 a, b = d[i], d[-i - 1]
+#                 if not ((a in self and b in self and b == a) or (a in left and b in right and left.index(a) == right.index(b)) or (a in right and b in left and right.index(a) == left.index(b))):
+#                     return 0
+#     return 1
+# d = input()
+# if palindrome(d) == 0 and mirror(d) == 0:
+#     print(d + ' is not a palindrome.')
+# elif palindrome(d) == 1 and mirror(d) == 0:
+#     print(d + ' is a regular palindrome.')
+# elif palindrome(d) == 0 and mirror(d) == 1:
+#     print(d + ' is a mirrored string.')
+# elif palindrome(d) == 1 and mirror(d) == 1:
+#     print(d + ' is a mirrored palindrome.')
+
+# #4
+# n = input()
+# print(''.join([n[i+1]+n[i] for i in range(0, len(n), 2) if len(n)%2==0]))
+# print(''.join([n[i+1]+n[i] for i in range(0, len(n)-1, 2) if len(n)%2!=0]) + str(*[n[-1] for _ in range(1) if len(n)%2!=0]))
+
+# #5
+# n = input()
+# print(n[-1] + ' ' + ''.join([n[i] for i in range(len(n) - 1)]))
+
+# #6
+# d = list(map(int, input().split()))
+# t = 0
+# for i in d:
+#     if d.count(i) == 1 and i != t:
+#         print(i)
+#         t = i
+
+# #7
+# d = list(map(int, input().split()))
+# t = 0
+# cnt = 0
+# for i in d:
+#     if d.count(i) > cnt:
+#         t = i
+# print(t)
+# #8
+# l = int(input())
+# d = list(map(int, input().split()))
+# min_diff = 100000
+# ans = 0
+# sr_ar = sum(d) / len(d)
+# for i in range(len(d)):
+#     if abs(d[i] - sr_ar) < min_diff:
+#         min_diff = abs(d[i] - sr_ar)
+#         ans = d[i]
+# print(ans)
+
+##9
+#import re
+#with open('example.txt', 'r') as f:
+#    text = f.read()
+#text = re.split(r'[.?!]', text)
+#ans = [x for x in text if x !='']
+#print(len(ans))
